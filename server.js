@@ -1,9 +1,15 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import VideoSchema from './videoSchema.js'
-const url = 'mongodb://192.168.99.100:27017/';
+//const url = 'mongodb://192.168.99.100:27017/'; - local server url
 
-mongoose.connect(url,  { useNewUrlParser: true, useUnifiedTopology: true });
+const url = "mongodb+srv://admin:AaOxKdqIkzF8qWNB@cluster0.y4tf3.gcp.mongodb.net/tiktokclone?retryWrites=true&w=majority";
+
+mongoose.connect(url,  {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true
+});
 
 const db  = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
