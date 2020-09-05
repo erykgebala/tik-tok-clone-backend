@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx nodemon --exec npx babel-node --experimental-modules server.js"
+    "start-dev": "npx nodemon --exec npx babel-node --experimental-modules server.js",
+    "start": "npx babel-node --experimental-modules server.js"
   },
   "author": "EG",
   "license": "ISC",
