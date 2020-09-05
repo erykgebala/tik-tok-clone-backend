@@ -21,7 +21,7 @@ app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Headers", "*");
     next();
 })
-const port = 9000;
+const port = process.env.PORT || 9000;
 
 app.get("/v1/videos", (req, res) => {
     VideoSchema.find((err, data) => {
